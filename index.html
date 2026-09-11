@@ -122,9 +122,8 @@
 <script>
 // faq toggle
 document.querySelectorAll('.faq-q').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('open')));
-// redirect if logged in
-const s = JSON.parse(localStorage.getItem('npp_session'));
-if (s) location.href = s.role === 'student' ? 'student.html' : 'lecturer.html';
+
+
 </script>
 </body>
 </html>
