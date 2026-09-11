@@ -1,8 +1,4 @@
 // ===== BACK LINK =====
-document.querySelector('.back-link')?.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.location.href = 'index.html';
-});
 
 const params = new URLSearchParams(location.search);
 let role = params.get('role') || 'student';
