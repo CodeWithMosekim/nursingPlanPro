@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student dashboard ✨ NursePlan Pro</title>
+<title>student dashboard ✨ NursePlan Pro</title>
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -11,45 +11,44 @@
 
 <aside class="sidebar">
   <div class="logo">🩺 NursePlan<span>Pro</span></div>
-   <a href="index.html" class="back-link">← home</a>
+  <a href="index.html" class="back-link">← home</a>
   <nav>
-   
-    <a href="index.html">📊 dashboard</a>
-    <a href="#">👥 schedule</a>
-    <a href="#">📅 classes</a>
-    <a href="#">📝 gradebook</a>
+    <a href="#" class="active">📊 dashboard</a>
+    <a href="#">📅 schedule</a>
+    <a href="#">⏱️ clinical hours</a>
+    <a href="#">📚 study plan</a>
   </nav>
-  <button class="btn btn-ghost btn-block" id="logout">log out</button>
+  <a href="index.html" class="btn btn-ghost btn-block">log out</a>
 </aside>
 
 <main class="dash-main">
   <header class="dash-header">
-    <h1>hey, <span id="name">lecturer</span> 👋</h1>
-    <p class="muted">here's your class overview</p>
+    <h1>hey, <span id="name">student</span> 👋</h1>
+    <p class="muted">here's your vibe check for today</p>
   </header>
 
   <section class="stats">
-    <div class="stat-card"><h3>clinic hrs</h3><b id="classes">3</b><small>of 200</small></div>
-    <div class="stat-card"><h3>shifts</h3><b id="students">84</b><small>this week</small></div>
-    <div class="stat-card"><h3>study hrs</h3></h3><b id="grades">7</b><small>this week</small></div>
-    <div class="stat-card"><h3>Assignment</h3><b id="today">2</b><small>due soon</small></div>
+    <div class="stat-card"><h3>clinical hours</h3><b id="hours">72</b><small>of 200</small></div>
+    <div class="stat-card"><h3>shifts</h3><b id="shifts">3</b><small>this week</small></div>
+    <div class="stat-card"><h3>study hrs</h3><b id="study">11</b><small>this week</small></div>
+    <div class="stat-card"><h3>due soon</h3><b id="due">2</b><small>assignments</small></div>
   </section>
 
   <section class="panel">
-    <h2>my classes</h2>
-    <div id="class-list" class="list"></div>
+    <h2>today's schedule</h2>
+    <div id="schedule" class="list"></div>
   </section>
 
   <section class="panel">
-    <h2>add a class</h2>
-    <form id="add-class" class="inline-form">
-      <input type="text" id="class-name" placeholder="e.g. anatomy 101" required>
-      <input type="number" id="class-count" placeholder="students" min="1" required>
+    <h2>add something</h2>
+    <form id="add-form" class="inline-form">
+      <input type="time" id="time" required>
+      <input type="text" id="activity" placeholder="e.g. biology 🧬" required>
       <button class="btn btn-primary">add ✨</button>
     </form>
   </section>
 </main>
 
-<script src="js/lecturer.js"></script>
+<script src="js/student.js"></script>
 </body>
 </html>
