@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>student dashboard ✨ NursePlan Pro</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="dash-body">
+
+<aside class="sidebar">
+  <div class="logo">🩺 NursePlan<span>Pro</span></div>
+  <nav>
+    <a href="#" class="active">📊 dashboard</a>
+    <a href="#">📅 schedule</a>
+    <a href="#">⏱️ clinical hours</a>
+    <a href="#">📚 study plan</a>
+  </nav>
+  <button class="btn btn-ghost btn-block" id="logout">log out</button>
+</aside>
+
+<main class="dash-main">
+  <header class="dash-header">
+    <h1>hey, <span id="name">student</span> 👋</h1>
+    <p class="muted">here's your vibe check for today</p>
+  </header>
+
+  <section class="stats">
+    <div class="stat-card"><h3>clinical hours</h3><b id="hours">72</b><small>of 200</small></div>
+    <div class="stat-card"><h3>shifts</h3><b id="shifts">3</b><small>this week</small></div>
+    <div class="stat-card"><h3>study hrs</h3><b id="study">11</b><small>this week</small></div>
+    <div class="stat-card"><h3>due soon</h3><b id="due">2</b><small>assignments</small></div>
+  </section>
+
+  <section class="panel">
+    <h2>today's schedule</h2>
+    <div id="schedule" class="list"></div>
+  </section>
+
+  <section class="panel">
+    <h2>add something</h2>
+    <form id="add-form" class="inline-form">
+      <input type="time" id="time" required>
+      <input type="text" id="activity" placeholder="e.g. biology 🧬" required>
+      <button class="btn btn-primary">add ✨</button>
+    </form>
+  </section>
+</main>
+
+<script src="js/student.js"></script>
+</body>
+</html>
