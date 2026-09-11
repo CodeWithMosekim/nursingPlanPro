@@ -150,3 +150,20 @@ section h2{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;letter-spacing:-.0
   .sidebar nav{flex-direction:row;flex-wrap:wrap;gap:.3rem}
   section{padding:3rem 1.5rem}
 }
+
+.back-link{
+  display:inline-block;
+  color:var(--muted);
+  font-size:.9rem;
+  font-weight:500;
+  padding:.5rem 0;
+  transition:.2s;
+  margin-bottom:1rem;
+}
+.back-link:hover{color:var(--primary-2)}
+.auth-body .back-link{
+  position:fixed;
+  top:1.5rem;
+  left:1.5rem;
+  z-index:10;
+}
