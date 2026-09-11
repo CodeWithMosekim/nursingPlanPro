@@ -1,3 +1,9 @@
+// ===== BACK LINK (works even if auth.js fails) =====
+document.querySelector('.back-link')?.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.href = 'index.html';
+});
+
 const params = new URLSearchParams(location.search);
 let role = params.get('role') || 'student';
 let signup = false;
@@ -36,6 +42,7 @@ form.addEventListener('submit', e => {
   const name = document.getElementById('name').value.trim();
 
   if (signup && !name) return alert('enter your name');
+
   const users = JSON.parse(localStorage.getItem('npp_users') || '[]');
 
   if (signup){
@@ -52,4 +59,6 @@ form.addEventListener('submit', e => {
   go(u.role);
 });
 
-function go(r){ location.href = r === 'student' ? 'student.html' : 'lecturer.html'; }
+function go(r){
+  window.location.href = r === 'student' ? 'student.html' : 'lecturer.html';
+}
