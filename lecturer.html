@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>lecturer dashboard ✨ NursePlan Pro</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="dash-body">
+
+<aside class="sidebar">
+  <div class="logo">🩺 NursePlan<span>Pro</span></div>
+  <nav>
+    <a href="#" class="active">📊 dashboard</a>
+    <a href="#">👥 students</a>
+    <a href="#">📅 classes</a>
+    <a href="#">📝 gradebook</a>
+  </nav>
+  <button class="btn btn-ghost btn-block" id="logout">log out</button>
+</aside>
+
+<main class="dash-main">
+  <header class="dash-header">
+    <h1>hey, <span id="name">lecturer</span> 👋</h1>
+    <p class="muted">here's your class overview</p>
+  </header>
+
+  <section class="stats">
+    <div class="stat-card"><h3>classes</h3><b id="classes">3</b><small>active</small></div>
+    <div class="stat-card"><h3>students</h3><b id="students">84</b><small>enrolled</small></div>
+    <div class="stat-card"><h3>to grade</h3><b id="grades">7</b><small>pending</small></div>
+    <div class="stat-card"><h3>today</h3><b id="today">2</b><small>classes</small></div>
+  </section>
+
+  <section class="panel">
+    <h2>my classes</h2>
+    <div id="class-list" class="list"></div>
+  </section>
+
+  <section class="panel">
+    <h2>add a class</h2>
+    <form id="add-class" class="inline-form">
+      <input type="text" id="class-name" placeholder="e.g. anatomy 101" required>
+      <input type="number" id="class-count" placeholder="students" min="1" required>
+      <button class="btn btn-primary">add ✨</button>
+    </form>
+  </section>
+</main>
+
+<script src="js/lecturer.js"></script>
+</body>
+</html>
