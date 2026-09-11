@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NursePlan Pro ✨ care plans, but make it easy</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="logo">🩺 NursePlan<span>Pro</span></div>
+  <div class="nav-links">
+    <a href="#features">features</a>
+    <a href="#pricing">pricing</a>
+    <a href="auth.html" class="btn btn-ghost">log in</a>
+    <a href="auth.html" class="btn btn-primary">get started</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="pill">✨ ai-powered care plans</div>
+    <h1>care plans,<br><span class="grad">but make it easy.</span></h1>
+    <p>the digital care plan platform built for nursing students who'd rather study than format documents. adpie workflow, ai suggestions, clinical logbook — all in one place.</p>
+    <div class="hero-btns">
+      <a href="auth.html?role=student" class="btn btn-primary btn-lg">i'm a student 🎓</a>
+      <a href="auth.html?role=lecturer" class="btn btn-outline btn-lg">i'm a lecturer 👩‍🏫</a>
+    </div>
+    <div class="trust">
+      <span>12k+ students</span>
+      <span>340+ schools</span>
+      <span>98k+ care plans</span>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <div class="card-top">
+      <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+    </div>
+    <div class="card-stats">
+      <div class="stat"><b>8</b><small>active</small></div>
+      <div class="stat"><b>3</b><small>submitted</small></div>
+      <div class="stat"><b>42h</b><small>clinical</small></div>
+    </div>
+    <div class="ai-tip">✨ ai suggestion: add "risk for infection" based on your assessment</div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <h2>everything you need. nothing you don't.</h2>
+  <div class="grid">
+    <div class="f-card"><div class="emoji">📋</div><h3>smart builder</h3><p>adpie workflow with autosave + version history.</p></div>
+    <div class="f-card"><div class="emoji">📚</div><h3>300+ diagnoses</h3><p>nanda library with interventions & rationales.</p></div>
+    <div class="f-card"><div class="emoji">✨</div><h3>ai suggestions</h3><p>smart goals + evidence-based interventions.</p></div>
+    <div class="f-card"><div class="emoji">💬</div><h3>instructor feedback</h3><p>inline comments + real-time grading.</p></div>
+    <div class="f-card"><div class="emoji">📖</div><h3>clinical logbook</h3><p>track hours, procedures, competencies.</p></div>
+    <div class="f-card"><div class="emoji">📄</div><h3>pdf export</h3><p>one-click, submission-ready pdfs.</p></div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <h2>pick your vibe</h2>
+  <div class="price-grid">
+    <div class="price-card">
+      <h3>student</h3>
+      <div class="price">$9<span>/mo</span></div>
+      <ul>
+        <li>✓ unlimited care plans</li>
+        <li>✓ diagnosis library</li>
+        <li>✓ clinical logbook</li>
+        <li>✓ pdf export</li>
+      </ul>
+      <a href="auth.html?role=student" class="btn btn-primary btn-block">start free</a>
+    </div>
+    <div class="price-card featured">
+      <div class="badge">🔥 most popular</div>
+      <h3>school</h3>
+      <div class="price">$199<span>/mo</span></div>
+      <ul>
+        <li>✓ everything in student</li>
+        <li>✓ instructor portal</li>
+        <li>✓ unlimited ai</li>
+        <li>✓ analytics dashboard</li>
+      </ul>
+      <a href="auth.html?role=lecturer" class="btn btn-primary btn-block">start trial</a>
+    </div>
+    <div class="price-card">
+      <h3>enterprise</h3>
+      <div class="price">custom</div>
+      <ul>
+        <li>✓ unlimited students</li>
+        <li>✓ multi-campus</li>
+        <li>✓ sso / ldap</li>
+        <li>✓ dedicated support</li>
+      </ul>
+      <a href="mailto:sales@nurseplanpro.com" class="btn btn-outline btn-block">contact sales</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <h2>faq, but quick</h2>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-q">is patient data confidential?</button><div class="faq-a"><p>yep. initials only, encrypted, gdpr-friendly.</p></div></div>
+    <div class="faq-item"><button class="faq-q">can my school use it across campuses?</button><div class="faq-a"><p>yes — enterprise plan supports multi-campus.</p></div></div>
+    <div class="faq-item"><button class="faq-q">does ai replace nursing judgment?</button><div class="faq-a"><p>nope. it's suggestions only. you + your instructor decide.</p></div></div>
+    <div class="faq-item"><button class="faq-q">is there a free trial?</button><div class="faq-a"><p>14 days free for students, 30-day pilot for schools.</p></div></div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>ready to ditch the formatting struggle?</h2>
+  <a href="auth.html" class="btn btn-primary btn-lg">get started ✨</a>
+</section>
+
+<footer class="footer">
+  <p>© 2025 NursePlan Pro · made with 🩺 for nursing students</p>
+</footer>
+
+<script>
+// faq toggle
+document.querySelectorAll('.faq-q').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('open')));
+// redirect if logged in
+const s = JSON.parse(localStorage.getItem('npp_session'));
+if (s) location.href = s.role === 'student' ? 'student.html' : 'lecturer.html';
+</script>
+</body>
+</html>
