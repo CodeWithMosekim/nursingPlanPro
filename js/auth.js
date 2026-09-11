@@ -1,4 +1,4 @@
-// ===== BACK LINK (works even if auth.js fails) =====
+// ===== BACK LINK =====
 document.querySelector('.back-link')?.addEventListener('click', (e) => {
   e.preventDefault();
   window.location.href = 'index.html';
@@ -49,13 +49,11 @@ form.addEventListener('submit', e => {
     if (users.find(u => u.email === email)) return alert('email already exists');
     users.push({ name, email, password, role });
     localStorage.setItem('npp_users', JSON.stringify(users));
-    localStorage.setItem('npp_session', JSON.stringify({ name, email, role }));
     return go(role);
   }
 
   const u = users.find(u => u.email === email && u.password === password && u.role === role);
   if (!u) return alert('invalid credentials');
-  localStorage.setItem('npp_session', JSON.stringify({ name: u.name, email: u.email, role: u.role }));
   go(u.role);
 });
 
